@@ -1,24 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import DestinationCards from './Components/DestinationCards';
+import trips from './trips';
+import Searchbar from './Components/Searchbar';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+return (
+
+<div>
+<Searchbar />
+<div>
+
+{trips.map((trip) => (<DestinationCards trip={trip} key={trip.id}/> ))}
+
+</div>
+</div>
   );
 }
 

@@ -1,18 +1,16 @@
-import React from 'react'
-import { useState } from 'react'
-import trips from '../trips'
 
-const Searchbar = () => {
-const [query, setQuery] = useState("")
-const destSearch = () => {
-    trips.filter(trip => trip.name.toLowerCase().includes(query.toLowerCase())).map((trip) => (<DestinationCards trip={trip} key={trip.id} />
-        ));
+import React from 'react'
+
+
+const Searchbar = ({setQuery}) => {
+
+
     
-    }
 
     return (
         <div>
-            <input placeholder="Dest Search" onChange={event => Searchbar } />
+            <input placeholder="Dest Search" onChange={(event) => setQuery(event.target.value)} />
+        
         </div>
     )
 }

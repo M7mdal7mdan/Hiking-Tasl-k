@@ -1,21 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-import DestinationCards from './Components/DestinationCards';
-import trips from './trips';
-import Searchbar from './Components/Searchbar';
+import DestinationList from './Components/DestinationList';
+import DestinationDetail from './Components/DestinationDetail';
+
+
+
+
 
 function App() {
-return (
-
+ 
+return(
 <div>
-<Searchbar />
-<div>
+<DestinationList/>
 
-{trips.map((trip) => (<DestinationCards trip={trip} key={trip.id}/> ))}
 
 </div>
-</div>
-  );
+)
 }
 
 export default App;

@@ -1,12 +1,11 @@
 import React from 'react'
 
 
-const DestinationCards = ({trip})  => {
-  
+const DestinationDetail = ({trip}) => {
 
     return (
         <div>
-            <h1> Welcome to: {trip.name}</h1>
+             <h1> Welcome to: {trip.name}</h1>
             <img src={trip.image}></img>
             <ul>
             <li> It takes place in the city of: {trip.city} </li>
@@ -16,7 +15,6 @@ const DestinationCards = ({trip})  => {
             </ul>
         </div>
     )
-    }
+}
 
-
-export default DestinationCards
+export default DestinationDetail
